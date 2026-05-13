@@ -9,7 +9,7 @@ argument-hint: "[入力ファイル(省略時は input/input.md)]"
 
 ## 実行内容
 
-1. `Skills/slide-generate/SKILL.md` を Read して手順を把握
+1. `.claude/skills/slide-generate/SKILL.md` を Read して手順を把握
 2. その手順どおりに実行:
    - 入力ファイル `$ARGUMENTS` を Read
    - `images/` と `resources/` を Glob で一覧化
@@ -18,7 +18,7 @@ argument-hint: "[入力ファイル(省略時は input/input.md)]"
    - CLAUDE.md の制約(タイトル 30 字 / 行 40 字 / 12 行 / 400 字 / 画像 2 枚)を遵守
    - 自動制約チェック → 違反は修正
    - `npx @marp-team/marp-cli` で PDF 化
-   - `Skills/slide-script/SKILL.md` を呼んで台本も生成
+   - `.claude/skills/slide-script/SKILL.md` を呼んで台本も生成
 3. 完了後、生成された 3 ファイル(`.md` / `.pdf` / `_script.md`)のパスを報告
 
 ## 補足

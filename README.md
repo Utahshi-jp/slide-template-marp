@@ -39,33 +39,34 @@ resources/      に過去記事やブログの .md/.pdf
 ## ディレクトリ構成
 
 ```
-slide/
-├── CLAUDE.md                         # Claude Code への指示(制約・Skill 一覧)
-├── README.md                         # このファイル
+slide-template-marp/
+├── CLAUDE.md                            # Claude Code への指示(制約・Skill 一覧)
+├── LICENSE                              # MIT
+├── README.md                            # このファイル
 ├── .claude/
-│   └── commands/                     # slash command 群
-│       ├── generate-slides.md        # input.md → output/.md 生成
-│       ├── research-and-slides.md    # Web 調査 + 生成
-│       ├── validate-slides.md        # 制約チェック
-│       ├── review-slides.md          # スクショ → ビジュアルレビュー
-│       └── export-pdf.md             # Marp CLI で PDF 化
-├── Skills/
-│   ├── slide-generate/SKILL.md       # スライド生成本体
-│   ├── slide-design-system/SKILL.md  # theme.css / コンポーネント追加
-│   ├── slide-review/SKILL.md         # ビジュアルレビュー
-│   └── slide-script/SKILL.md         # 台本生成
+│   ├── commands/                        # slash command 群
+│   │   ├── generate-slides.md           # input.md → output/.md 生成
+│   │   ├── research-and-slides.md       # Web 調査 + 生成
+│   │   ├── validate-slides.md           # 制約チェック
+│   │   ├── review-slides.md             # スクショ → ビジュアルレビュー
+│   │   └── export-pdf.md                # Marp CLI で PDF 化
+│   └── skills/
+│       ├── slide-generate/SKILL.md      # スライド生成本体
+│       ├── slide-design-system/SKILL.md # theme.css / コンポーネント追加
+│       ├── slide-review/SKILL.md        # ビジュアルレビュー
+│       └── slide-script/SKILL.md        # 台本生成
 ├── themes/
-│   └── theme.css                     # 自作テーマ + コンポーネント集
+│   └── theme.css                        # 自作テーマ + コンポーネント集
 ├── templates/
-│   ├── input_template.md             # 入力スキーマ(SSoT)
-│   ├── YYYYMMDD_template.md          # Marp テンプレ(Storybook 相当)
-│   └── script_template.md            # 台本テンプレ
+│   ├── input_template.md                # 入力スキーマ(SSoT)
+│   ├── YYYYMMDD_template.md             # Marp テンプレ(Storybook 相当)
+│   └── script_template.md               # 台本テンプレ
 ├── input/
-│   └── input.md                      # 登壇要約(ユーザが書く)
-├── images/                           # 画像アセット(.png/.jpg/.svg)
-├── resources/                        # 参考資料(.md/.pdf)
-├── output/                           # 生成物の置き場
-└── docs/                             # 設計思想・経緯メモ(design-philosophy.md / journey.md)
+│   └── input.md                         # 登壇要約(ユーザが書く)
+├── images/                              # 画像アセット(.png/.jpg/.svg)
+├── resources/                           # 参考資料(.md/.pdf)
+├── output/                              # 生成物の置き場
+└── docs/                                # 設計思想・経緯メモ(design-philosophy.md / journey.md)
 ```
 
 ---
@@ -141,7 +142,7 @@ slide/
 
 ```
 Claude Code: テーマに「タイムライン用のコンポーネント」を追加して
-→ Skills/slide-design-system が起動 → themes/theme.css と templates に追記
+→ .claude/skills/slide-design-system が起動 → themes/theme.css と templates に追記
 ```
 
 ---
@@ -166,7 +167,7 @@ Claude Code: テーマに「タイムライン用のコンポーネント」を�
 
 ## デザインシステム思想
 
-「4 点セット(`theme.css` / `CLAUDE.md` / `templates/` / `Skills/`)で品質を担保する」という設計を採用している。
+「4 点セット(`theme.css` / `CLAUDE.md` / `templates/` / `.claude/skills/`)で品質を担保する」という設計を採用している。
 詳細は [`docs/design-philosophy.md`](./docs/design-philosophy.md) 参照。
 
 運用上の鉄則: **同じレイアウトを 2 回以上使ったら `theme.css` にコンポーネント化する**。

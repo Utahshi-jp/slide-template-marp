@@ -60,7 +60,7 @@
 | コンポーネントライブラリ | `themes/theme.css` | shadcn/ui, MUI |
 | Design Tokens / Rules | `CLAUDE.md` | Tailwind config |
 | Storybook(実装例) | `templates/YYYYMMDD_template.md` | Storybook |
-| ジェネレータ | `Skills/slide-generate/SKILL.md` | codegen, Plop.js |
+| ジェネレータ | `.claude/skills/slide-generate/SKILL.md` | codegen, Plop.js |
 
 ### なぜこの 4 つが必要か
 
@@ -182,7 +182,7 @@
 
 - `templates/input_template.md` を新規作成(frontmatter スキーマ + コメント付き)
 - `input/input.md` を frontmatter 形式にリファクタ
-- `Skills/slide-generate/SKILL.md` の Step 1 を「frontmatter を必ず読む」に修正
+- `.claude/skills/slide-generate/SKILL.md` の Step 1 を「frontmatter を必ず読む」に修正
 - `CLAUDE.md` に入力スキーマを追記
 - frontmatter のパース動作確認 → 必須5項目すべて埋まる
 
@@ -219,7 +219,7 @@
 
 - `templates/input_template.md` に「★ SSoT」ヘッダと `schema_version: 1`、`# --- 必須 ---` `# --- 任意 ---` セクション
 - `CLAUDE.md` のスキーマブロックを削除、要約のみ残す
-- `Skills/slide-generate/SKILL.md` の Step 1 を書き換え(テンプレを先に Read)
+- `.claude/skills/slide-generate/SKILL.md` の Step 1 を書き換え(テンプレを先に Read)
 - **動作実証**: テンプレに `target_emotion` を1行追加 → 必須項目が5→6に追従 → input.md で欠落検出 → テンプレ復元
 - スキーマ変更が**1ファイル編集で完結**することを物理的に証明
 

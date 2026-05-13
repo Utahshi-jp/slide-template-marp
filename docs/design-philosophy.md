@@ -10,12 +10,12 @@
 スライド生成の再現性を上げるために、以下 4 つを揃えて育てる。
 これは Figma のデザインシステムや React のコンポーネントライブラリと同じ考え方。
 
-| 役割 | ファイル | 例えるなら |
-|---|---|---|
-| **コンポーネントライブラリ** | `themes/theme.css` | shadcn/ui, MUI |
-| **Design Tokens / Usage Guidelines** | `CLAUDE.md` の制約セクション | Tailwind config |
-| **Storybook / 実装例集** | `templates/YYYYMMDD_template.md` | Storybook |
-| **生成エンジン** | `Skills/slide-generate/` | コードジェネレーター |
+| 役割                                 | ファイル                         | 例えるなら           |
+| ------------------------------------ | -------------------------------- | -------------------- |
+| **コンポーネントライブラリ**         | `themes/theme.css`               | shadcn/ui, MUI       |
+| **Design Tokens / Usage Guidelines** | `CLAUDE.md` の制約セクション     | Tailwind config      |
+| **Storybook / 実装例集**             | `templates/YYYYMMDD_template.md` | Storybook            |
+| **生成エンジン**                     | `.claude/skills/slide-generate/` | コードジェネレーター |
 
 ---
 
@@ -32,6 +32,6 @@
 - **`theme.css`**: 見た目のルールはここだけにある状態を維持する。スライド本体の `.md` に style 直書きをしない
 - **`CLAUDE.md`**: AI が毎回読むルール。文字数・行数・画像枚数など、定量的制約だけを置く
 - **`templates/`**: 「`.metric-card` ってどう書くんだっけ」を解決する実装例集。新規コンポーネントは必ずここに見本を残す
-- **`Skills/`**: 「スライド作って」と言われた時のワークフローを担う。CLAUDE.md には書かない(冗長化を避ける)
+- **`.claude/skills/`**: 「スライド作って」と言われた時のワークフローを担う。CLAUDE.md には書かない(冗長化を避ける)
 
 この 4 層を混ぜないことで、改修時の影響範囲を最小化できる。

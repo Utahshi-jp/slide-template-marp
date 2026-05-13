@@ -82,10 +82,10 @@ AI に「いい感じに作って」と言うと曖昧になるので明文化�
 
 | トリガーワード例 | スキル名 | パス |
 |---|---|---|
-| 「スライドを作って」「登壇資料を作って」「LT スライドを生成」 | slide-generate | ./Skills/slide-generate/SKILL.md |
-| 「テーマを直して」「コンポーネントを追加」「色を変えて」「CSS を整えて」 | slide-design-system | ./Skills/slide-design-system/SKILL.md |
-| 「スライドをレビュー」「見た目チェック」「スクショ撮って確認」 | slide-review | ./Skills/slide-review/SKILL.md |
-| 「台本を作って」「スピーカーノートを書いて」「読み原稿」 | slide-script | ./Skills/slide-script/SKILL.md |
+| 「スライドを作って」「登壇資料を作って」「LT スライドを生成」 | slide-generate | ./.claude/skills/slide-generate/SKILL.md |
+| 「テーマを直して」「コンポーネントを追加」「色を変えて」「CSS を整えて」 | slide-design-system | ./.claude/skills/slide-design-system/SKILL.md |
+| 「スライドをレビュー」「見た目チェック」「スクショ撮って確認」 | slide-review | ./.claude/skills/slide-review/SKILL.md |
+| 「台本を作って」「スピーカーノートを書いて」「読み原稿」 | slide-script | ./.claude/skills/slide-script/SKILL.md |
 
 各スキルが実行手順・ツール起動方法・エスカレーション条件を持つ。本ファイルには重複させない。
 

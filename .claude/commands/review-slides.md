@@ -9,7 +9,7 @@ argument-hint: "[出力ファイル(省略時は output/ 配下の最新)]"
 
 ## 実行内容
 
-1. `Skills/slide-review/SKILL.md` を Read して手順を把握
+1. `.claude/skills/slide-review/SKILL.md` を Read して手順を把握
 2. 手順に従って以下を順に実行:
    - Marp CLI で HTML / PNG を出力
    - Puppeteer MCP でページごとにスクショ(MCP がない場合は PNG を Read で読み込み)

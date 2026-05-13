@@ -1,5 +1,6 @@
 # 生成物・個別案件の素材(各自で配置)
-output/
+output/*
+!output/.gitkeep
 images/*
 !images/.gitkeep
 !images/logo.png
