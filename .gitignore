@@ -1,0 +1,27 @@
+# 生成物・個別案件の素材(各自で配置)
+output/
+images/*
+!images/.gitkeep
+!images/logo.png
+resources/*
+!resources/.gitkeep
+
+# input は雛形を残しつつ、書き換えはローカル管理を推奨する場合に外す
+# input/input.md
+
+# Claude Code 生成物・履歴
+.claude/projects/
+.claude/file-history/
+.claude/todos/
+.claude/shell-snapshots/
+.claude/statsig/
+.claude/ide/
+.claude/memory/
+.claude/.review-passed
+.claude.json
+
+# OS / エディタ
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
