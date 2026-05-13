@@ -185,27 +185,11 @@ Claude Code: テーマに「タイムライン用のコンポーネント」を�
 
 ---
 
-## Slidev 派生について
+## Slidev への展開メモ
 
-このテンプレは **Marp 専用** だが、将来的に同じ `input/input.md` から Slidev 版のスライドを生成する派生(`slide-slidev/`)を作る予定。
+このテンプレは **Marp 専用** だが、同じ `input/input.md` を入力に Slidev 版を派生させる構想もある。Slidev は **Vue 3 + Vite + UnoCSS** で動くため、インタラクティブ要素やフロントエンド学習を兼ねたい場合に有用。
 
-Slidev は **Vue 3 + Vite + UnoCSS** で動くため、フロントエンド学習も兼ねるなら有用。
-
-派生計画(構想段階):
-
-```
-study/
-├── slide/                    # Marp 版(このリポ)
-│   └── input/input.md
-└── slide-slidev/             # Slidev 版(将来)
-    ├── slides.md
-    ├── components/
-    ├── layouts/
-    └── theme/
-```
-
-`input/input.md` を共有することで「同じ内容を 2 つのフォーマットで生成」できるようにする。
-Slidev 派生は別ディレクトリで構築し、お互い干渉しないようにする。
+入力ファイルだけ共有し、Slidev 派生はリポジトリを分けて構築する想定。同じ内容を 2 フォーマットで生成できる利点がある一方、Marp ほど AI 生成と相性は良くないため、用途に応じて選ぶ。
 
 ---
 
